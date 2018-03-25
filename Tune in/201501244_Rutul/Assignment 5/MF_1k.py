@@ -4,6 +4,7 @@ import surprise
 from surprise import Reader
 from surprise import Dataset
 from surprise.model_selection import cross_validate
+from guppy import hpy
 
 class MatrixFacto(surprise.AlgoBase):
     '''A basic rating prediction algorithm based on matrix factorization.'''
@@ -52,3 +53,5 @@ if __name__ == '__main__':
     data = Dataset.load_from_df(df[['user_id', 'song_id', 'rating']], reader)
     algo = MatrixFacto(learning_rate=0.01, n_epochs=10, n_factors=10)
     cross_validate(algo,data,measures=['RMSE'],cv=5,verbose=True)
+    h=hpy()
+    print (h.heap())
