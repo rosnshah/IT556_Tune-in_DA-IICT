@@ -1,1 +1,3 @@
-# IT556_Tune-in_DA-IICT
+# Tune In
+> Music Recommendation System
+> Mentor: Prof. Sourish Dasguta
